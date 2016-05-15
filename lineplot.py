@@ -9,12 +9,13 @@ plt.style.use(['./ethplot.mplstyle'])
 
 fig = plt.figure()
 
+LEFT = -0.035
 
 fig.suptitle('Key-value System Throughput',
              horizontalalignment='left',
              weight='bold', fontsize=20,
-             x=-0.035, y=1.078)
-fig.text(-0.035, 1.0041, "While increasing the amount of SET requests.",
+             x=LEFT, y=1.078)
+fig.text(LEFT, 1.0041, "While increasing the amount of SET requests.",
          horizontalalignment='left',
          weight='medium', fontsize=16, color='#555555')
 
@@ -22,7 +23,7 @@ ax1 = fig.add_subplot(1, 1, 1)
 ax1.set_xlabel('SET rate [%]')
 ax1.set_ylabel('Requests / s', rotation
                ='horizontal', horizontalalignment='left')
-ax1.yaxis.set_label_coords(-0.035, 1.03)
+ax1.yaxis.set_label_coords(LEFT-0.005, 1.03)
 ax1.spines['top'].set_visible(False)
 ax1.spines['right'].set_visible(False)
 ax1.get_xaxis().tick_bottom()

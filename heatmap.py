@@ -11,11 +11,12 @@ def heatmap(name, data, title, text):
     plt.style.use(['ethplot.mplstyle'])
     #savefig.pad_inches: 0.08
 
+    LEFT = 0.125
     fig.suptitle(title,
              horizontalalignment='left',
              weight='bold', fontsize=20,
-             x=0.125, y=1)
-    t = fig.text(0.125, 0.92, text,
+             x=LEFT, y=1)
+    t = fig.text(LEFT, 0.92, text,
                  horizontalalignment='left',
                  weight='medium', fontsize=16, color='#555555')
 

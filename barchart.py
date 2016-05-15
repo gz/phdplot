@@ -9,12 +9,13 @@ NAME = "barchart"
 ticks_font = font_manager.FontProperties(family='Decima Mono')
 plt.style.use(['./ethplot.mplstyle'])
 
+LEFT = -0.035
 fig, ax = plt.subplots()
 fig.suptitle('A Bar Chart',
              horizontalalignment='left',
              weight='bold', fontsize=20,
-             x=-0.035, y=1.078)
-fig.text(-0.035, 1.0041, "Scores by group and gender.",
+             x=LEFT, y=1.078)
+fig.text(LEFT, 1.0041, "Scores by group and gender.",
          horizontalalignment='left',
          weight='medium', fontsize=16, color='#555555')
 
@@ -34,7 +35,7 @@ rects2 = ax.bar(ind+width, womenMeans, width, yerr=womenStd, color=colors[-2], e
 
 # add some text for labels, title and axes ticks
 ax.set_ylabel('Scores', rotation='horizontal', horizontalalignment='left')
-ax.yaxis.set_label_coords(-0.035, 1.03)
+ax.yaxis.set_label_coords(LEFT, 1.03)
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 ax.get_xaxis().tick_bottom()

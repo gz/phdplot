@@ -24,11 +24,12 @@ def heatmap(name, data, title, text):
     fig, ax = plt.subplots()
     ticks_font = font_manager.FontProperties(family='Decima Mono')
     plt.style.use(['ethplot.mplstyle'])
+    LEFT = 0.125
     fig.suptitle(title,
              horizontalalignment='left',
              weight='bold', fontsize=20,
-             x=0.125, y=1)
-    t = fig.text(0.125, 0.92, text,
+             x=LEFT, y=1)
+    t = fig.text(LEFT, 0.92, text,
                  horizontalalignment='left',
                  weight='medium', fontsize=16, color='#555555')
 
