@@ -42,10 +42,8 @@ def heatmap(name, data, title, text):
 
     ax.tick_params(pad=11)
 
-    for label in ax.get_yticklabels():
-        label.set_fontproperties(ticks_font)
-    for label in ax.get_xticklabels():
-        label.set_fontproperties(ticks_font)
+    plt.setp(ax.get_xticklabels(), fontproperties=ticks_font)
+    plt.setp(ax.get_yticklabels(), fontproperties=ticks_font)
 
     norm = MidpointNormalize(midpoint=1.0)
     c = plt.pcolor(data, cmap = colors, vmin=0.5, vmax=2.5, norm=norm)
@@ -62,8 +60,7 @@ def heatmap(name, data, title, text):
                      fontproperties=ticks_font)
 
     colorbar = plt.colorbar(c)
-    for label in colorbar.ax.get_yticklabels():
-        label.set_fontproperties(ticks_font)
+    plt.setp(colorbar.ax.get_yticklabels(), fontproperties=ticks_font)
 
     plt.savefig(name + ".png", format='png')
     #ppad_inched=0.08 here because otherwise it cuts off the numbers...

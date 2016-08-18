@@ -48,11 +48,8 @@ ax.legend((rects1[0], rects2[0], rects3[0], rects4[0], rects5[0], rects6[0]),
           ('partitioning', 'window allocation', 'sorting', 'merging', 'joining', 'imbalance'),
           prop={ 'weight': 'light' }, ncol=3, bbox_to_anchor=(1.02, 1.15))
 
-for label in ax.get_xticklabels():
-    label.set_fontproperties(ticks_font)
-
-for label in ax.get_yticklabels():
-    label.set_fontproperties(ticks_font)
+plt.setp(ax.get_xticklabels(), fontproperties=ticks_font)
+plt.setp(ax.get_yticklabels(), fontproperties=ticks_font)
 
 def autolabel(rects):
     for rect in rects:
