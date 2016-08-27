@@ -46,11 +46,8 @@ ax.set_xticks(ind+width)
 ax.set_xticklabels(('Group A', 'Group B', 'Group C', 'Group D', 'Group E'), weight='light')
 ax.legend( (rects1[0], rects2[0]), ('Men', 'Women'), prop={ 'weight': 'light' }, ncol=2, bbox_to_anchor=(1.02, 1.1))
 
-#for label in ax.get_xticklabels():
-#    label.set_fontproperties(ticks_font)
-
-for label in ax.get_yticklabels():
-    label.set_fontproperties(ticks_font)
+#plt.setp(ax.get_xticklabels(), fontproperties=ticks_font)
+plt.setp(ax.get_yticklabels(), fontproperties=ticks_font)
 
 def autolabel(rects):
     # attach some text labels

@@ -51,10 +51,7 @@ y = np.sin(x) + 4 * x + np.random.randn(50)
 p = ax1.plot(x, y, label="System E")
 ax1.annotate('System E', xy=(x[-5], y[-5]), xytext=(x[-5], y[-5]-1.3), weight='light', color=p[0].get_color())
 
-for label in ax1.get_xticklabels():
-    label.set_fontproperties(ticks_font)
-
-for label in ax1.get_yticklabels():
-    label.set_fontproperties(ticks_font)
+plt.setp(ax1.get_xticklabels(), fontproperties=ticks_font)
+plt.setp(ax1.get_yticklabels(), fontproperties=ticks_font)
 
 plt.savefig(NAME + ".png", format='png')
