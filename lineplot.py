@@ -5,7 +5,7 @@ np.random.seed(0)
 
 NAME = "lineplot"
 ticks_font = font_manager.FontProperties(family='Decima Mono')
-plt.style.use(['./ethplot.mplstyle'])
+plt.style.use([os.path.join(sys.path[0], 'ethplot.mplstyle')])
 
 fig = plt.figure()
 

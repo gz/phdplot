@@ -23,7 +23,7 @@ class MidpointNormalize(Normalize):
 def heatmap(name, data, title, text):
     fig, ax = plt.subplots()
     ticks_font = font_manager.FontProperties(family='Decima Mono')
-    plt.style.use(['ethplot.mplstyle'])
+    plt.style.use([os.path.join(sys.path[0], 'ethplot.mplstyle')])
     LEFT = 0.125
     fig.suptitle(title,
              horizontalalignment='left',

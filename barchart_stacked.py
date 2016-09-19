@@ -3,7 +3,7 @@ import numpy as np
 from palettable import tableau
 
 ticks_font = font_manager.FontProperties(family='Decima Mono')
-plt.style.use(['./ethplot.mplstyle'])
+plt.style.use([os.path.join(sys.path[0], 'ethplot.mplstyle')])
 
 fig, ax = plt.subplots()
 
