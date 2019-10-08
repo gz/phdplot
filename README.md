@@ -24,7 +24,9 @@ $ fc-cache -vf ~/.fonts/
 ![alt text](barchart.png "Barchart Example")
 ![alt text](barchart_stacked.png "Stacked Barchart Example")
 
-
 ## Heatmaps
 ![alt text](heatmap.png "Heatmap Dark")
 ![alt text](heatmap_colorized.png "Heatmap Colors")
+
+## Timeseries
+![alt text](timeseries.png "Timeseries")
