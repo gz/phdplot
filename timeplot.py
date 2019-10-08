@@ -38,7 +38,6 @@ fig = plt.figure()
 fig.suptitle('Performance History', weight='bold', fontsize=20)
 
 ax1 = fig.add_subplot(1, 1, 1)
-ax1.set_xlabel('Time')
 ax1.set_ylabel('Requests / s')
 ax1.spines['top'].set_visible(False)
 ax1.spines['right'].set_visible(False)
